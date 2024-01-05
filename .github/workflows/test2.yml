@@ -1,4 +1,4 @@
-name: build-beyond1lte
+name: build-beyond1lte-test
 
 on:
   workflow_dispatch:
