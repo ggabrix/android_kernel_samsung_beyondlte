@@ -32,13 +32,11 @@ jobs:
         sudo apt install libdebuginfod-dev
         export PATH="$(pwd)/toolchain/bin:${PATH}"
         cd exynos9820
-        bash build.sh none beyond1lte
-        git log --no-decorate --oneline -n 100 > out/ak3/ChangeLog.txt
+        ./build.sh beyond1lte
 
     - name: Upload final output
       uses: actions/upload-artifact@v3
       with:
         name: release-ksu
         path: |
-          exynos9820/out/ak3/ChangeLog.txt
           exynos9820/out/ak3/*.zip
