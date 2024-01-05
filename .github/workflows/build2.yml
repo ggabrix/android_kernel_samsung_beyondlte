@@ -1,0 +1,19 @@
+name: build-davinci222
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout kernel source
+      uses: actions/checkout@v3
+    - name: Android kernel build
+      run: |
+        ./build.sh beyond1lte
+    - name: Upload final output
+      uses: actions/upload-artifact@v3
+      with:
+        name: release-ksu
+        path: *.zip
