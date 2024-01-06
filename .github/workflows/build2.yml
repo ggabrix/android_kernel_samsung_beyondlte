@@ -15,7 +15,5 @@ jobs:
     - name: Upload final output
       uses: actions/upload-artifact@v3
       with:
-        name: release-ksu
-        path: | 
-          ./build
-          ./*.zip
+        name: release-ramdisk
+        path: '*.zip'
