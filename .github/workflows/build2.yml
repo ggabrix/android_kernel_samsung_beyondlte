@@ -16,7 +16,6 @@ jobs:
       run: |
         pwd
         ls -la
-        ls -la | grep zip
         pwd
         cd build
         ls -la
