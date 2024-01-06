@@ -14,14 +14,7 @@ jobs:
         ./build.sh none beyond1lte
     - name: List files
       run: |
-        pwd
-        ls
-        ls -la
-        cd ..
-        pwd
-        ls -la
-        cd ..
-        pwd
+        cd build
         ls -la
         
     - name: Upload final output
