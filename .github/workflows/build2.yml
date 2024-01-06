@@ -12,6 +12,18 @@ jobs:
     - name: Android kernel build
       run: |
         ./build.sh none beyond1lte
+    - name: List files
+      run: |
+        pwd
+        ls
+        ls -la
+        cd ..
+        pwd
+        ls -la
+        cd ..
+        pwd
+        ls -la
+        
     - name: Upload final output
       uses: actions/upload-artifact@v3
       with:
