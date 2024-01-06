@@ -16,4 +16,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: release-ramdisk
-        path: '*.zip'
+        path: |
+          '*.zip'
+          ./build
+          *
